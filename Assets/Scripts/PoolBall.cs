@@ -7,8 +7,7 @@ public class PoolBall : MonoBehaviour
     public AudioSource ballHitSound;
 
     void OnCollisionEnter (Collision collision) {
-        Debug.Log($"{gameObject.name} is colliding with {collision.collider.name}");
-        if (!ballHitSound.isPlaying && collision.collider.name == "PoolBall") {
+        if (!ballHitSound.isPlaying && (collision.collider.name == "PoolBall" || collision.collider.name == "pool_stick")) {
             ballHitSound.Play();
         }
     }
