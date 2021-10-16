@@ -586,7 +586,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.7972069
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -684,7 +684,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 102ccbb0a8d67f944a1c946b79e6739f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8239cf3b89766b24ead0d770a0f4bd19, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -694,7 +694,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.65681124
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
