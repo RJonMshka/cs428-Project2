@@ -11,7 +11,7 @@ public class pingPongBall : MonoBehaviour
     }
 
     void OnCollisionEnter (Collision collision) {
-        if (!pingPongBallSound.isPlaying && (collision.collider.name == "tennis_bat" || collision.collider.name == "TableTennisTop" || collision.collider.name == "GeneratorBase" collision.collider.name == "ping_pong_ball")) {
+        if (!pingPongBallSound.isPlaying && (collision.collider.name == "tennis_bat" || collision.collider.name == "TableTennisTop" || collision.collider.name == "GeneratorBase" || collision.collider.name == "ping_pong_ball")) {
             pingPongBallSound.Play();
         }
     }

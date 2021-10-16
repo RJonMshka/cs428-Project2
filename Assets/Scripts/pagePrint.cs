@@ -13,17 +13,17 @@ public class pagePrint : MonoBehaviour
     public GameObject TasksComplete;
     private bool isTaskTwoComplete = false;
     private bool isPrinting = false;
+    private float pageForce = 90f;
 
 
     void OnTriggerEnter (Collider other) {
-        Debug.Log($"{gameObject.name} is colliding with {other.name}");
         if(!isPrinting && other.name == "ExampleAvatar") {
             if(!isTaskTwoComplete) {
                 UpdateTasks();
             }
             isTaskTwoComplete = true;
             isPrinting = true;
-            InvokeRepeating("SetPrintingFalse", 0f, 3f);
+            Invoke("SetPrintingOff", 4f);
             if(!sound.isPlaying) {
                 sound.Play();
             }
@@ -31,12 +31,19 @@ public class pagePrint : MonoBehaviour
         }
     }
 
-    void SetPrintingFalse() {
+    void SetPrintingOff() {
         isPrinting = false;
     }
 
     void CreatePage() {
-        Instantiate(page, spawnTransform.position, spawnTransform.rotation);
+        GameObject newPage;
+
+        newPage = Instantiate(page, spawnTransform.position, spawnTransform.rotation);
+
+        Rigidbody pageRigidbody;
+        pageRigidbody = newPage.GetComponent<Rigidbody>();
+
+        pageRigidbody.AddForce(transform.forward * pageForce);
     }
 
     void UpdateTasks() {
