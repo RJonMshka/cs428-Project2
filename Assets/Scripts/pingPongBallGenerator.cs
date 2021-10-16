@@ -12,7 +12,7 @@ public class pingPongBallGenerator : MonoBehaviour
         if(!isGenerating && other.name == "ExampleAvatar") {
             Instantiate(pingPongBall, ballSpawnPoint.position, ballSpawnPoint.rotation);
             isGenerating = true;
-            InvokeRepeating("SetBallGenerator", 0f, 3f);
+            Invoke("SetBallGenerator", 3f);
         }
     }
 
