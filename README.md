@@ -1,3 +1,14 @@
+# CS - 428 AR/VR and Mixed Reality
+## Project 2 Submission
+
+## Rajat Kumar (UIN: 653922910)
+
+### Theme: Fear of Working in an Office or Returning to the Office
+
+This Project is based on Unity and VRTK4. Please find the documentation for VRTK4 below:
+
+
+
 [![VRTK logo][VRTK-Image]](#)
 
 # VR Bowling Game Tutorial
